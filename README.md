@@ -1,4 +1,4 @@
-<img src="PhilippCoin.png" height="300" width="400">
+<img src="PhilippCoin.png" height="300" width="300">
 
 # PhilippCoin
 
