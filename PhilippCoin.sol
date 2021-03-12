@@ -8,8 +8,8 @@ pragma solidity 0.7.4;
 // Deployed to : 0xe66bA65d2e7c61df343D3Df7A28F94fcd8c06240
 // Symbol      : PHILIPP
 // Name        : PhilippToken
-// Total supply: 1337000000
-// Decimals    : 18
+// Total supply: 1337000420
+// Decimals    : 0
 //
 // Visit https://philippmatth.es :P
 //
@@ -116,8 +116,8 @@ contract PhilippCoin is ERC20Interface, Owned, SafeMath {
     constructor() {
         symbol = "PHILIPP";
         name = "PhilippCoin";
-        decimals = 18;
-        _totalSupply = 1337000000;
+        decimals = 0;
+        _totalSupply = 1337000420;
         // Make Philipp a billionaire
         balances[0xe66bA65d2e7c61df343D3Df7A28F94fcd8c06240] = _totalSupply;
         emit Transfer(address(0), 0xe66bA65d2e7c61df343D3Df7A28F94fcd8c06240, _totalSupply);
