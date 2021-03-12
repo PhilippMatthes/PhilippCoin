@@ -1,4 +1,4 @@
-pragma solidity 0.6.6;
+pragma solidity 0.7.4;
 
 // ----------------------------------------------------------------------------
 // 'PhilippToken' token contract
@@ -73,7 +73,7 @@ contract Owned {
 
     event OwnershipTransferred(address indexed _from, address indexed _to);
 
-    constructor() public {
+    constructor() {
         owner = msg.sender;
     }
 
@@ -98,7 +98,7 @@ contract Owned {
 // ERC20 Token, with the addition of symbol, name and decimals and assisted
 // token transfers
 // ----------------------------------------------------------------------------
-contract GGMToken is ERC20Interface, Owned, SafeMath {
+contract PhilippCoin is ERC20Interface, Owned, SafeMath {
     string public symbol;
     string public  name;
     uint8 public decimals;
@@ -111,9 +111,9 @@ contract GGMToken is ERC20Interface, Owned, SafeMath {
     // ------------------------------------------------------------------------
     // Constructor
     // ------------------------------------------------------------------------
-    constructor() public {
+    constructor() {
         symbol = "PHILIPP";
-        name = "PhilippToken";
+        name = "PhilippCoin";
         decimals = 18;
         _totalSupply = 1337000000;
         // Make Philipp a billionaire
