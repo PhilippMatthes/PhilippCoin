@@ -1,6 +1,6 @@
-# PhilippCoin
+<img src="PhilippCoin.png" height="300" width="400">
 
-![lel](Screenshot.png)
+# PhilippCoin
 
 PhilippCoin is a new crypto currency created to make Philipp rich. It is an ERC20 smart contract token which is deployed to the ethereum blockchain. The smart contract implementation can be found under `PhilippCoin.sol`.
 
