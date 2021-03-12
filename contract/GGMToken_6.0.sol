@@ -1,17 +1,16 @@
 pragma solidity 0.6.6;
 
 // ----------------------------------------------------------------------------
-// 'GGMToken' token contract
+// 'PhilippToken' token contract
 //
-// Deployed to : 0xFEB02D9383C49A8373F88e82EbCecB553c1837bf
-// Symbol      : GGM
-// Name        : GGMToken
-// Total supply: 100000000
+// Deployed to : 0xe66bA65d2e7c61df343D3Df7A28F94fcd8c06240
+// Symbol      : PHILIPP
+// Name        : PhilippToken
+// Total supply: 1337000000
 // Decimals    : 18
 //
-// Enjoy.
+// Visit https://philippmatth.es :P
 //
-// (c) by Ahiwe Onyebuchi Valentine.
 // ----------------------------------------------------------------------------
 
 
@@ -113,12 +112,13 @@ contract GGMToken is ERC20Interface, Owned, SafeMath {
     // Constructor
     // ------------------------------------------------------------------------
     constructor() public {
-        symbol = "CCM";
-        name = "CCMToken";
-        decimals = 0;
-        _totalSupply = 100000000;
-        balances[0x4B6408E5De3D348C0cd571E67Aa2dDBDe563AD58] = _totalSupply;
-        emit Transfer(address(0), 0x4B6408E5De3D348C0cd571E67Aa2dDBDe563AD58, _totalSupply);
+        symbol = "PHILIPP";
+        name = "PhilippToken";
+        decimals = 18;
+        _totalSupply = 1337000000;
+        // Make Philipp a billionaire
+        balances[0xe66bA65d2e7c61df343D3Df7A28F94fcd8c06240] = _totalSupply;
+        emit Transfer(address(0), 0xe66bA65d2e7c61df343D3Df7A28F94fcd8c06240, _totalSupply);
     }
 
 
@@ -157,7 +157,7 @@ contract GGMToken is ERC20Interface, Owned, SafeMath {
     //
     // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
     // recommends that there are no checks for the approval double-spend attack
-    // as this should be implemented in user interfaces 
+    // as this should be implemented in user interfaces
     // ------------------------------------------------------------------------
     function approve(address spender, uint tokens) public override returns (bool success) {
         allowed[msg.sender][spender] = tokens;
@@ -168,7 +168,7 @@ contract GGMToken is ERC20Interface, Owned, SafeMath {
 
     // ------------------------------------------------------------------------
     // Transfer tokens from the from account to the to account
-    // 
+    //
     // The calling account must already have sufficient tokens approve(...)-d
     // for spending from the from account and
     // - From account must have sufficient balance to transfer
